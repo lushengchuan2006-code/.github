@@ -212,16 +212,12 @@ git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </sp
 git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>&lt;新分支的名称&gt;
 </code></pre></div>
 将 <code>&lt;新分支的名称&gt;</code> 替换为之前新建的分支名称。
-<details>
-<summary> <strong>如果在 push（推送）过程中出 error（错误），点击这里</strong> </summary>
-
-- ### Authentication Error
-     <pre>remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
-  remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
-  fatal: Authentication failed for 'https://github.com/<your-username>/first-contributions.git/'</your-username></pre>
-  去 [GitHub 的教程](https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) 学习如何生成新的 SSH 密匙以及配置。
-
-</details>
+<p>如果在 push（推送）过程中出 error（错误），如下所示</p>
+<p>### Authentication Error
+  -remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+  -remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+  -fatal: Authentication failed for 'https://github.com/<your-username>/first-contributions.git/'</your-username></p>
+<p>去 <a href="https://docs.github.com/zh/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">GitHub 的教程</a> 学习如何生成新的 SSH 密钥以及配置。</p>
 <p><strong>8.</strong> 在自己仓库的首页发现有提交领先于湖工商仓库的<code>main</code>分支，则点击<code>Contribute</code> 创建 <a href="https://zhuanlan.zhihu.com/p/153381521">Pull Request</a> ，来湖工商仓库<strong>做出贡献</strong>，创建成功后等待管理员审核通过（如果发现个人仓库落后于湖工商仓库则点击<code>Sync fork</code>以同步其他人的最新修改）。</p>
 <p><img src="https://firstcontributions.github.io/assets/Readme/compare-and-pull.png" width="410"/></p>
 <p><img src="https://firstcontributions.github.io/assets/Readme/submit-pull-request.png" width="410"/></p>
