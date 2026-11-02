@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="None" name="description"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="None" name="description"/><link href="https://openhutb.github.io/.github/" rel="canonical"/>
 <link href="img/favicon.ico" rel="shortcut icon"/>
 <title>社区介绍</title>
 <link href="css/theme.css" rel="stylesheet"/>
@@ -14,7 +14,7 @@
         // Current page data
         var mkdocs_page_name = "\u9996\u9875";
         var mkdocs_page_input_path = "index.md";
-        var mkdocs_page_url = null;
+        var mkdocs_page_url = "/.github/";
       </script>
 <!--[if lt IE 9]>
       <script src="js/html5shiv.min.js"></script>
@@ -30,13 +30,13 @@
 <a class="icon icon-home" href="."> 社区介绍
         </a><div role="search">
 <form action="./search.html" class="wy-form" id="rtd-search-form" method="get">
-<input aria-label="Search docs" name="q" placeholder="搜索文档" title="Type search term here" type="text"/>
+<input aria-label="Search docs" name="q" placeholder="Search docs" title="Type search term here" type="text"/>
 </form>
 </div>
 </div>
 <div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal current" href="#">首页</a>
+<li class="toctree-l1 current"><a class="reference internal current" href=".">首页</a>
 <ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="#1-简介">1. 简介 </a>
 </li>
@@ -47,6 +47,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#4-社区">4. 社区  </a>
 </li>
 </ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="simulator/">模拟器简介</a>
 </li>
 </ul>
 <ul>
@@ -63,10 +67,6 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="paper_tips/">论文写作技巧</a>
-</li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="bib_reference_guide/">Latex文献引用编译办法</a>
 </li>
 </ul>
 <ul>
@@ -103,11 +103,11 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="note/">注意事项</a>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="wsl/">wsl 安装与配置和卸载</a>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">工具与资源</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction/">模拟器演示：涉水效果</a>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="tools/">开源工具列表</a>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="blender/">三维建模软件 Blender 介绍</a>
@@ -142,7 +142,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="."></a></li>
 <li class="breadcrumb-item active">首页</li>
 <li class="wy-breadcrumbs-aside">
-<a href="https://github.com/OpenHUTB/.github/edit/master/docs/index.md"> 编辑页面</a>
+<a class="icon icon-github" href="https://github.com/OpenHUTB/.github/edit/master/docs/index.md"> Edit on GitHub</a>
 </li>
 </ul>
 <hr/>
@@ -161,10 +161,10 @@
 <h2 id="1-简介">1. 简介 <span id="list"></span></h2>
 <ul>
 <li>
-<p><a href="./simulator.md">OpenHUTB 模拟器简介</a></p>
+<p><a href="simulator/">OpenHUTB 模拟器简介</a></p>
 </li>
 <li>
-<p>第一次参与开源项目请参考 <strong><a href="CONTRIBUTING/">贡献指南</a></strong> 、非代码开发人员请参考<a href="codespace/">基于浏览器的贡献指南</a></p>
+<p>第一次参与开源项目请参考 <strong><a href="https://openhutb.github.io/.github/CONTRIBUTING/">贡献指南</a></strong> 、非代码开发人员请参考<a href="codespace/">基于浏览器的贡献指南</a></p>
 </li>
 <li>
 <p><a href="https://openhutb.github.io/git/?locale=zh_CN">git 教程</a>、<a href="https://docs.github.com/zh/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">Markdown 教程</a>、<a href="https://liaoxuefeng.com/books/python/introduction/index.html">Python教程（到第13章）</a>、<a href="https://www.runoob.com/cplusplus/cpp-tutorial.html">C++教程</a></p>
@@ -193,6 +193,12 @@
 <li>
 <p><a href="dev/vm_disk/">给 Ubuntu 虚拟机硬盘扩容</a></p>
 </li>
+<li>
+<p><a href="dev/vscode_push/">在 VS Code 中提交和推送修改</a></p>
+</li>
+<li>
+<p><a href="resolve_conflict/">使用 TortoiseGit 解决合并冲突</a></p>
+</li>
 </ul>
 <h2 id="3-问题">3. 问题 <span id="questions"></span></h2>
 <ul>
@@ -200,7 +206,7 @@
 <p>如果参与过程中遇到任何问题，请参考 <a href="ask_question/">提问技巧</a> 和 <a href="note/">注意事项</a> 或在对应项目的 <a href="https://github.com/OpenHUTB/hutb/issues">Issues页面</a> 提出问题。</p>
 </li>
 <li>
-<p>如要加入组织、添加项目、获得更高权限等需要请把github用户名发送到邮箱 <a href="open@hutb.edu.cn">open@hutb.edu.cn</a> 。</p>
+<p>如需加入组织、添加项目或获取更高权限，请把GitHub用户名发送到邮箱 <a href="mailto:open@hutb.edu.cn">open@hutb.edu.cn</a> 。</p>
 </li>
 <li>
 <p>网络不稳定的时候可以参考 <a href="https://openhutb.github.io/doc/build_carla/#internet">github 加速方案和科学上网链接</a> </p>
@@ -209,16 +215,13 @@
 <h2 id="4-社区">4. 社区  <span id="propaganda"></span></h2>
 <ul>
 <li>
-<p><a href="https://github.com/OpenHUTB/.github/actions">用户的社区参与度月度统计情况</a> - 该 action 页面的 User Activity Report 里，每月1号自动进行统计，注意，该量化统计情况仅作参考，不代表代码质量的优劣</p>
+<p><a href="https://github.com/OpenHUTB/.github/actions">用户的社区参与度月度统计情况</a> - 在 Actions 的 User Activity Report 工作流中，每月 1 日 00:00（UTC）自动统计上月数据；结果以 Artifacts 形式附在该次运行记录中，需要时下载 data.csv，过期后需手动重跑。</p>
 </li>
 <li>
 <p><a href="https://github.com/OpenHUTB/.github/tree/master/reports">社区每个仓库的月度变化统计情况</a></p>
 </li>
 <li>
 <p><a href="markdown2anything/">Markdown 一键发到各个社交平台</a></p>
-</li>
-<li>
-<p><a href="./propagate.md">宣传</a></p>
 </li>
 </ul>
 <p>OpenHUTB 的其他非主要平台包括 <a href="https://gitee.com/OpenHUTB">gitee</a>、<a href="https://gitcode.com/OpenHUTB">gitcode</a>、<a href="https://gitlink.org.cn/OpenHUTB">gitlink</a>、<a href="https://osredm.com/OpenHUTB">红山开源</a>、<a href="https://codeup.aliyun.com/6a64b5ff637ebe3073ca8044/OpenHUTB">阿里云</a>、<a href="https://atomgit.com/OpenHUTB">atomgit</a>、<a href="https://git.code.tencent.com/OpenHUTB">腾讯工蜂</a>，社交平台包括：</p>
@@ -260,17 +263,19 @@
 </table>
 <p>备注：开源孪创社区不搭建自己独立的平台的原因有很多，比如独立平台可能生成的“信息孤岛”造成分裂、维护成本高、“去中心化”理念与降低用户门槛、风险规避与可持续性，同时不会因为其中一些依附平台的限制而影响社区的发展，使社区专注于核心使命。</p>
 <hr/>
-<p>如果对文档中的代码或描述有任何问题，可以在 <a href="https://github.com/OpenHUTB/templte">本文档的源码仓库</a> 中的 <a href="https://github.com/OpenHUTB/templte/issues">问题</a> 页面讨论，或者提交 <a href="https://github.com/OpenHUTB/.github/blob/master/CONTRIBUTING.md">拉取请求</a> 直接修改文档。</p></div>
+<p>如果对文档中的任何问题可以在 <a href="https://github.com/OpenHUTB/.github">本文档的源码仓库</a> 中的 <a href="https://github.com/OpenHUTB/.github/issues">问题</a> 页面讨论或者提交 <a href="https://github.com/OpenHUTB/.github/blob/master/CONTRIBUTING.md">拉取请求</a> 直接修改文档。</p></div>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
-<a class="btn btn-neutral float-right" href="CONTRIBUTING/" title="贡献指南">后一页 <span class="icon icon-circle-arrow-right"></span></a>
+<a class="btn btn-neutral float-right" href="simulator/" title="模拟器简介">Next <span class="icon icon-circle-arrow-right"></span></a>
 </div>
 <hr>
 <div role="contentinfo">
 <!-- Copyright etc -->
 <p>OpenHUTB 版权所有 © 2026</p>
 </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </hr></footer>
 </div>
 </div>
@@ -279,9 +284,9 @@
 <div aria-label="Versions" class="rst-versions" role="note">
 <span class="rst-current-version" data-toggle="rst-current-version">
 <span>
-<a href="https://github.com/OpenHUTB/.github" style="color: #fcfcfc">OpenHUTB</a>
+<a class="fa fa-github" href="https://github.com/OpenHUTB/.github" style="color: #fcfcfc"> GitHub</a>
 </span>
-<span><a href="CONTRIBUTING/" style="color: #fcfcfc">后一页 »</a></span>
+<span><a href="simulator/" style="color: #fcfcfc">Next »</a></span>
 </span>
 </div>
 <script src="js/jquery-3.6.0.min.js"></script>
@@ -303,6 +308,6 @@
 </body>
 </html>
 <!--
-MkDocs version : 1.5.9
-Build Date UTC : 2026-11-02 13:21:45.153564+00:00
+MkDocs version : 1.5.3
+Build Date UTC : 2026-11-02 13:37:17.772978+00:00
 -->

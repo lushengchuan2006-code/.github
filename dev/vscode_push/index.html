@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://openhutb.github.io/.github/dev/vscode_push/" rel="canonical"/>
 <link href="../../img/favicon.ico" rel="shortcut icon"/>
 <title>使用 VScode 推送代码 - 社区介绍</title>
 <link href="../../css/theme.css" rel="stylesheet"/>
@@ -14,7 +14,7 @@
         // Current page data
         var mkdocs_page_name = "\u4f7f\u7528 VScode \u63a8\u9001\u4ee3\u7801";
         var mkdocs_page_input_path = "dev/vscode_push.md";
-        var mkdocs_page_url = null;
+        var mkdocs_page_url = "/.github/dev/vscode_push/";
       </script>
 <!--[if lt IE 9]>
       <script src="../../js/html5shiv.min.js"></script>
@@ -30,13 +30,17 @@
 <a class="icon icon-home" href="../.."> 社区介绍
         </a><div role="search">
 <form action="../../search.html" class="wy-form" id="rtd-search-form" method="get">
-<input aria-label="Search docs" name="q" placeholder="搜索文档" title="Type search term here" type="text"/>
+<input aria-label="Search docs" name="q" placeholder="Search docs" title="Type search term here" type="text"/>
 </form>
 </div>
 </div>
 <div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../..">首页</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../simulator/">模拟器简介</a>
 </li>
 </ul>
 <ul>
@@ -53,10 +57,6 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../paper_tips/">论文写作技巧</a>
-</li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../bib_reference_guide/">Latex文献引用编译办法</a>
 </li>
 </ul>
 <ul>
@@ -81,7 +81,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../sign_up/">注册 Github 账号</a>
 </li>
-<li class="toctree-l1 current"><a class="reference internal current" href="#">使用 VScode 推送代码</a>
+<li class="toctree-l1 current"><a class="reference internal current" href="./">使用 VScode 推送代码</a>
 <ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="#一环境准备安装-gitwindows">一、环境准备：安装 Git（Windows）</a>
 <ul>
@@ -119,6 +119,28 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#七推送到远程-github-仓库">七、推送到远程 GitHub 仓库</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#方式-a-vscode-图形界面">方式 A VSCode 图形界面</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#方式-b-终端命令">方式 B 终端命令</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#八提交-prpull-request">八、提交 PR（Pull Request）</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#九常见踩坑">九、常见踩坑</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#十主仓库更新后同步当前工作分支">十、主仓库更新后同步当前工作分支</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#1-确认工作分支">1. 确认工作分支</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#2-配置并核对主仓库地址">2. 配置并核对主仓库地址</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#3-获取并合并更新">3. 获取并合并更新</a>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../pycharm-tutorial/">PyCharm 教程</a>
@@ -131,11 +153,11 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../note/">注意事项</a>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../wsl/">wsl 安装与配置和卸载</a>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">工具与资源</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../introduction/">模拟器演示：涉水效果</a>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="../../tools/">开源工具列表</a>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../blender/">三维建模软件 Blender 介绍</a>
@@ -171,7 +193,7 @@
 <li class="breadcrumb-item">贡献相关</li>
 <li class="breadcrumb-item active">使用 VScode 推送代码</li>
 <li class="wy-breadcrumbs-aside">
-<a href="https://github.com/OpenHUTB/.github/edit/master/docs/dev/vscode_push.md"> 编辑页面</a>
+<a class="icon icon-github" href="https://github.com/OpenHUTB/.github/edit/master/docs/dev/vscode_push.md"> Edit on GitHub</a>
 </li>
 </ul>
 <hr/>
@@ -203,10 +225,6 @@
 <li><a href="#%E6%96%B9%E5%BC%8F-b%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4">方式 B：终端命令</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="#%E6%B7%BB%E5%8A%A0%E6%94%B9%E5%8A%A8%E6%96%87%E4%BB%B6">添加改动文件</a></li>
-<li><a href="#%E6%8F%90%E4%BA%A4%E5%BC%95%E5%8F%B7%E5%86%85%E5%86%99%E6%9C%AC%E6%AC%A1%E6%94%B9%E5%8A%A8%E6%8F%8F%E8%BF%B0">提交，引号内写本次改动描述</a><ul>
 <li><a href="#%E4%B8%83%E6%8E%A8%E9%80%81%E5%88%B0%E8%BF%9C%E7%A8%8B-github-%E4%BB%93%E5%BA%93">七、推送到远程 GitHub 仓库</a><ul>
 <li><a href="#%E6%96%B9%E5%BC%8F-a-vscode-%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2">方式 A VSCode 图形界面</a></li>
 <li><a href="#%E6%96%B9%E5%BC%8F-b-%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4">方式 B 终端命令</a></li>
@@ -214,7 +232,12 @@
 </li>
 <li><a href="#%E5%85%AB%E6%8F%90%E4%BA%A4-prpull-request">八、提交 PR（Pull Request）</a></li>
 <li><a href="#%E4%B9%9D%E5%B8%B8%E8%A7%81%E8%B8%A9%E5%9D%91">九、常见踩坑</a></li>
-<li><a href="#%E5%8D%81%E5%BD%93%E4%B8%BB%E4%BB%93%E5%BA%93%E6%9C%89%E6%9B%B4%E6%96%B0%E5%AF%BC%E8%87%B4%E6%9C%89%E5%86%B2%E7%AA%81%E6%97%B6%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95">十、当主仓库有更新导致有冲突时的解决办法</a></li>
+<li><a href="#%E5%8D%81%E4%B8%BB%E4%BB%93%E5%BA%93%E6%9B%B4%E6%96%B0%E5%90%8E%E5%90%8C%E6%AD%A5%E5%BD%93%E5%89%8D%E5%B7%A5%E4%BD%9C%E5%88%86%E6%94%AF">十、主仓库更新后同步当前工作分支</a><ul>
+<li><a href="#1-%E7%A1%AE%E8%AE%A4%E5%B7%A5%E4%BD%9C%E5%88%86%E6%94%AF">1. 确认工作分支</a></li>
+<li><a href="#2-%E9%85%8D%E7%BD%AE%E5%B9%B6%E6%A0%B8%E5%AF%B9%E4%B8%BB%E4%BB%93%E5%BA%93%E5%9C%B0%E5%9D%80">2. 配置并核对主仓库地址</a></li>
+<li><a href="#3-%E8%8E%B7%E5%8F%96%E5%B9%B6%E5%90%88%E5%B9%B6%E6%9B%B4%E6%96%B0">3. 获取并合并更新</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -233,8 +256,9 @@
 </ol>
 <h3 id="3-配置-git-用户名与邮箱必须设置否则提交报错">3. 配置 Git 用户名与邮箱（必须设置，否则提交报错）</h3>
 <p>打开 PowerShell，执行下面两行，替换成你自己 GitHub 的用户名和注册邮箱
-git config --global user.name "你的 GitHub 用户名"
-git config --global user.email "你的 GitHub 注册邮箱"</p>
+</p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">"你的 GitHub 用户名"</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">"你的 GitHub 注册邮箱"</span>
+</code></pre></div>
 <h3 id="4-验证-git-是否装好">4. 验证 Git 是否装好</h3>
 <p>打开 PowerShell，输入：
 </p><div class="highlight"><pre><span></span><code>git --version
@@ -273,16 +297,27 @@ git config --global user.email "你的 GitHub 注册邮箱"</p>
 <h2 id="三前置说明">三、前置说明</h2>
 <p>本教程演示：在 VS Code 内完成 Git 提交、推送到 GitHub 的完整流程，适用于 OpenHUTB 文档仓库贡献。</p>
 <blockquote>
-<p>⚠️ 重要规范：<strong>不要直接在 master 主分支修改，所有改动新建独立分支操作</strong></p>
+<p>⚠️ 重要规范：<strong>不要直接在 master 主分支修改，所有改动新建独立分支操作</strong>
+创建分支的方法
+</p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>你的分支名
+</code></pre></div>
+检查自己所在分支的方法
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>branch
+</code></pre></div>
+输出的所有分支里前面带 <code>*</code> 的就是目前所在分支
 </blockquote>
+<p>更换分支的方法
+</p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>你要选择的分支
+</code></pre></div>
+建立分支修改文档的好处是不会污染本地仓库
 <h2 id="四准备仓库">四、准备仓库</h2>
 <ol>
 <li>把仓库克隆到本地
-<div class="highlight"><pre><span></span><code>git clone 仓库地址
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>仓库地址
 </code></pre></div></li>
 <li>VS Code 打开仓库文件夹</li>
 <li>新建工作分支（终端执行）
-<div class="highlight"><pre><span></span><code>git checkout -b 你的分支名
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>你的分支名
 </code></pre></div></li>
 </ol>
 <h2 id="五在-vs-code-内修改文件">五、在 VS Code 内修改文件</h2>
@@ -296,17 +331,17 @@ git config --global user.email "你的 GitHub 注册邮箱"</p>
 <li>点击【提交】</li>
 </ol>
 <h3 id="方式-b终端命令">方式 B：终端命令</h3>
-<h1 id="添加改动文件">添加改动文件</h1>
-<div class="highlight"><pre><span></span><code>git add 文件名
+<div class="highlight"><pre><span></span><code><span class="c1"># 添加改动文件</span>
+git<span class="w"> </span>add<span class="w"> </span>文件名
 </code></pre></div>
-<h1 id="提交引号内写本次改动描述">提交，引号内写本次改动描述</h1>
-<div class="highlight"><pre><span></span><code>git commit -m "新增 VSCode 推送教程"
+<div class="highlight"><pre><span></span><code><span class="c1"># 提交，引号内写本次改动描述</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"新增 VSCode 推送教程"</span>
 </code></pre></div>
 <h2 id="七推送到远程-github-仓库">七、推送到远程 GitHub 仓库</h2>
 <h3 id="方式-a-vscode-图形界面">方式 A VSCode 图形界面</h3>
 <p>提交完成后，源代码管理顶部会出现 <strong>推送</strong> 按钮，点击推送。</p>
 <h3 id="方式-b-终端命令">方式 B 终端命令</h3>
-<div class="highlight"><pre><span></span><code>git push origin 你的分支名
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>你的分支名
 </code></pre></div>
 <h2 id="八提交-prpull-request">八、提交 PR（Pull Request）</h2>
 <p>推送成功后，打开仓库 GitHub 网页</p>
@@ -324,45 +359,51 @@ git config --global user.email "你的 GitHub 注册邮箱"</p>
 <li>mkdocs 网页找不到页面：检查 mkdocs.yml 的路径和 md 文件位置完全匹配</li>
 <li>代码冲突：多人同时修改同一文件会出现冲突，解决冲突后再提交</li>
 </ol>
-<h2 id="十当主仓库有更新导致有冲突时的解决办法">十、当主仓库有更新导致有冲突时的解决办法</h2>
-<ol>
-<li>
-<p>关联主仓库(如果已经关联则不用重复关联)
-</p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>upstream
-你需要关联的仓库地址eg：htpps://github.com/OpenHUTB/.github.git
+<h2 id="十主仓库更新后同步当前工作分支">十、主仓库更新后同步当前工作分支</h2>
+<p>在已经克隆的个人 Fork 中，先确认当前工作分支；以下以 <code>你的分支名</code> 为例。先提交需要保留的修改，或用 <code>git stash</code> 暂存到一边，再进行同步；只运行 <code>git add</code> 还没有保存成一次提交。</p>
+<h3 id="1-确认工作分支">1. 确认工作分支</h3>
+<p>切换到需要更新的工作分支，确认没有尚未处理的本地修改：</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>switch<span class="w"> </span>你的分支名
+git<span class="w"> </span>status
 </code></pre></div>
-查看是否成功关联的方法
+<h3 id="2-配置并核对主仓库地址">2. 配置并核对主仓库地址</h3>
+<p><code>origin</code> 应指向自己的 Fork，<code>upstream</code> 应指向原来的 OpenHUTB 仓库：</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>remote<span class="w"> </span>-v
 </code></pre></div>
-此时能看到origin和upstream即为成功
-</li>
-<li>
-<p>拉取主仓库最新代码再手动解决冲突
-</p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>fetch<span class="w"> </span>upstream<span class="w"> </span>master
+<p>如果列表里还没有 <code>upstream</code>，只在首次配置时执行一次：</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>upstream<span class="w"> </span>https://github.com/OpenHUTB/.github.git
 </code></pre></div>
-如果出现冲突，手动解决冲突
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>.
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"merge upstream and resolve conflicts"</span>
+<p>随后检查实际地址：</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>remote<span class="w"> </span>get-url<span class="w"> </span>upstream
 </code></pre></div>
-当这个 commit 成功后，本地的合并过程就彻底完成了。此时你本地的 master 分支已经包含了主仓库的最新代码以及你解决冲突后的最终结果
-</li>
-<li>
-<p>把同步好的master推送到自己的fork仓库(origin)
-</p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>master
+<p>本例应输出 <code>https://github.com/OpenHUTB/.github.git</code>。如果提示 <code>remote upstream already exists</code>，说明名称已存在，先检查地址；地址确实指错仓库时，才用 <code>git remote set-url upstream https://github.com/OpenHUTB/.github.git</code> 修正。</p>
+<h3 id="3-获取并合并更新">3. 获取并合并更新</h3>
+<p>获取主仓库更新，再合入当前工作分支：</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>fetch<span class="w"> </span>upstream<span class="w"> </span>master
+git<span class="w"> </span>merge<span class="w"> </span>upstream/master
 </code></pre></div>
-</li>
-</ol></div>
+<p><code>fetch</code> 只下载更新，<code>merge</code> 才会把主仓库的 <code>master</code> 合入当前工作分支。若出现冲突，在 VS Code 中检查冲突标记，保留需要的内容并保存文件；然后只暂存已解决的文件，并完成合并提交：</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>路径/已解决的文件.md
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"合并主仓库更新并解决冲突"</span>
+</code></pre></div>
+<p>没有冲突时，Git 会直接完成合并，无需再运行上述 <code>git add</code> 和 <code>git commit</code>。最后确认工作区状态，并推送当前工作分支，随后在原有 PR 中查看更新：</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>status
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>你的分支名
+</code></pre></div>
+<p>远程地址的查看和修改可参考 <a href="https://git-scm.com/docs/git-remote">Git remote 文档</a>。</p></div>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
-<a class="btn btn-neutral float-left" href="../sign_up/" title="注册 Github 账号"><span class="icon icon-circle-arrow-left"></span> 前一页</a>
-<a class="btn btn-neutral float-right" href="../../pycharm-tutorial/" title="PyCharm 教程">后一页 <span class="icon icon-circle-arrow-right"></span></a>
+<a class="btn btn-neutral float-left" href="../sign_up/" title="注册 Github 账号"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-right" href="../../pycharm-tutorial/" title="PyCharm 教程">Next <span class="icon icon-circle-arrow-right"></span></a>
 </div>
 <hr/>
 <div role="contentinfo">
 <!-- Copyright etc -->
 <p>OpenHUTB 版权所有 © 2026</p>
 </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
 </div>
 </div>
@@ -371,10 +412,10 @@ git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </sp
 <div aria-label="Versions" class="rst-versions" role="note">
 <span class="rst-current-version" data-toggle="rst-current-version">
 <span>
-<a href="https://github.com/OpenHUTB/.github" style="color: #fcfcfc">OpenHUTB</a>
+<a class="fa fa-github" href="https://github.com/OpenHUTB/.github" style="color: #fcfcfc"> GitHub</a>
 </span>
-<span><a href="../sign_up/" style="color: #fcfcfc">« 前一页</a></span>
-<span><a href="../../pycharm-tutorial/" style="color: #fcfcfc">后一页 »</a></span>
+<span><a href="../sign_up/" style="color: #fcfcfc">« Previous</a></span>
+<span><a href="../../pycharm-tutorial/" style="color: #fcfcfc">Next »</a></span>
 </span>
 </div>
 <script src="../../js/jquery-3.6.0.min.js"></script>
