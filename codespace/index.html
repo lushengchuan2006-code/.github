@@ -48,7 +48,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="" href="https://openhutb.github.io/git/?locale=zh_CN">git 教程</a>
+<li class="toctree-l1"><a class="" href="https://openhutb.github.io/git/?locale=zh_CN">Git 教程</a>
 </li>
 </ul>
 <ul>
@@ -119,6 +119,12 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../wsl/">wsl 安装与配置和卸载</a>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../submit/">文档修改指南</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/">视频制作流程</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../adv/find_author/">查找文档作者与源码</a>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">工具与资源</span></p>
 <ul>
@@ -127,6 +133,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../blender/">三维建模软件 Blender 介绍</a>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../markdown2anything/">Markdown 一键发布到社交平台</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Minecraft%20Java%20Edition%20Downgrade%20Guide/">Java 版 Minecraft 回退旧版本指南</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../src/python/">Python 论文绘图脚本</a>
 </li>
 </ul>
 <p class="caption"><span class="caption-text">学习与论文</span></p>
@@ -165,6 +175,7 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <div><h1 id="基于浏览器的贡献指南">基于浏览器的贡献指南</h1>
+<p>本指南介绍如何通过GitHub Codespaces（基于浏览器的在线开发环境）为OpenHUTB项目做贡献</p>
 <h2 id="1-fork-仓库">1. Fork 仓库</h2>
 <p><strong><a href="https://openhutb.github.io/.github/dev/sign_up/">注册</a> 并登录 GitHub 账号</strong>，在 <a href="https://github.com/OpenHUTB/hutb">想要修改的开源孪创仓库</a> 页面右上角点击<code>Fork</code></p>
 <p><img alt="" src="../img/codespace/fork.png"/></p>
@@ -172,7 +183,7 @@
 <p><img alt="" src="../img/codespace/create_fork.png"/></p>
 <p>出现的页面即为社区仓库的拷贝。</p>
 <h2 id="2-启用自动化流水线">2. 启用自动化流水线</h2>
-<p>点击个人项目的“Actions -&gt; I understand my workflows, go ahead and enable them”启用自动化流水线。</p>
+<p>进入仓库的 <code>Actions</code> 标签页，在首次访问 Fork 仓库的 Actions 页面时，会弹出提示框，点击绿色按钮 <strong>I understand my workflows, go ahead and enable them</strong>，即可启用工作流。</p>
 <p><img alt="" src="../img/codespace/actions.png"/></p>
 <p>点击“Settings -&gt; Actions -&gt; General -&gt; Workflow permissions -&gt; read and write permissions” 启用项目的 Action 写入权限。</p>
 <p><img alt="" src="../img/codespace/action_general.png"/></p>
@@ -244,21 +255,25 @@ python<span class="w"> </span>-m<span class="w"> </span>mkdocs<span class="w"> <
 </ul>
 <p>如果分支或文件列表与预期不符，先弄清已有修改的用途，保存好需要保留的内容，再继续操作。</p>
 <h2 id="离开前的检查">离开前的检查</h2>
-<p>结束编辑前，请确认文件已保存，并查看待提交文件列表；需要稍后继续时，记下当前分支和最后一次提交。这样重新打开环境后，可以从同一位置继续处理。</p></div>
+<p>结束编辑前，请确认文件已保存，并查看待提交文件列表；需要稍后继续时，记下当前分支和最后一次提交。这样重新打开环境后，可以从同一位置继续处理。</p>
+<hr/>
+<blockquote>
+<p>本页最近一次修改：2026-11-10 · IPAR22 · 提交 <a href="https://github.com/OpenHUTB/.github/commit/b57c179"><code>b57c179</code></a></p>
+</blockquote></div>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
 <a class="btn btn-neutral float-left" href="../ask_question/" title="提问技巧"><span class="icon icon-circle-arrow-left"></span> Previous</a>
 <a class="btn btn-neutral float-right" href="../dev/sign_up/" title="注册 Github 账号">Next <span class="icon icon-circle-arrow-right"></span></a>
 </div>
-<hr/>
+<hr>
 <div role="contentinfo">
 <!-- Copyright etc -->
 <p>OpenHUTB 版权所有 © 2026</p>
 </div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
+</hr></footer>
 </div>
 </div>
 </section>
